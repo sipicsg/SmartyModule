@@ -12,7 +12,7 @@
         "view"
     ],
     "require": {
-        "php": ">=5.5",
+        "php": ">=7.2",
         "zendframework/zend-view": "2.*",
         "smarty/smarty": "3.1.*"
     },
@@ -23,11 +23,8 @@
         }
     ],
     "autoload": {
-        "psr-0": {
-            "SmartyModule\\": "src/"
+        "psr-4": {
+            "SmartyModule\\": [ "src/","./Module.php" ]
         },
-	"classmap": [
-	    "./Module.php"
-	]
-    }
+    },
 }

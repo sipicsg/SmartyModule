@@ -1,8 +1,9 @@
 <?php
 namespace SmartyModule\Service;
 
+use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use SmartyModule\View\Renderer\SmartyRenderer;
 
 
@@ -13,6 +14,11 @@ use SmartyModule\View\Renderer\SmartyRenderer;
  * Time: 13:39
  */
 class SmartyRendererFactory implements  FactoryInterface {
+
+    public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
+    {
+        return $this->createService($container->get('ServiceManager'));
+    }
 
     /**
      * Create service

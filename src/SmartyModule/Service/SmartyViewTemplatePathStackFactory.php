@@ -10,11 +10,17 @@
 namespace SmartyModule\Service;
 
 use Zend\View\Resolver as ViewResolver;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
+use Interop\Container\ContainerInterface;
 
 class SmartyViewTemplatePathStackFactory implements FactoryInterface
 {
+
+    public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
+    {
+        return $this->createService($container->get('ServiceManager'));
+    }
 
     /**
      * Create service
