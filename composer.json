@@ -24,7 +24,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "SmartyModule\\": [ "src/","./Module.php" ]
-        },
-    },
+            "SmartyModule\\": "src/SmartyModule"
+        }
+    }
 }
