@@ -29,11 +29,11 @@ return array(
     ),
     'service_manager' => array(
         'factories' => array(
-            'SmartyViewResolver' => 'SmartyModule\Service\SmartyViewResolverFactory',
-            'SmartyViewTemplateMapResolver' => 'SmartyModule\Service\SmartyViewTemplateMapResolverFactory',
-            'SmartyViewTemplatePathStack' => 'SmartyModule\Service\SmartyViewTemplatePathStackFactory',
-            'SmartyRenderer' => 'SmartyModule\Service\SmartyRendererFactory',
-            'SmartyStrategy' => 'SmartyModule\Service\SmartyStrategyFactory',
+            'SmartyViewResolver' => SmartyModule\Service\SmartyViewResolverFactory::class,
+            'SmartyViewTemplateMapResolver' => SmartyModule\Service\SmartyViewTemplateMapResolverFactory::class,
+            'SmartyViewTemplatePathStack' => SmartyModule\Service\SmartyViewTemplatePathStackFactory::class,
+            'SmartyRenderer' => SmartyModule\Service\SmartyRendererFactory::class,
+            'SmartyStrategy' => SmartyModule\Service\SmartyStrategyFactory::class,
         )
     ),
 );
